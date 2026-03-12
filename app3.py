@@ -125,7 +125,7 @@ if mode == "Single Employee Prediction":
     if st.button("Predict Salary"):
         prediction = predict_salary(input_df)
         st.subheader("Prediction Result")
-        st.success(f"Predicted Monthly Income: **${prediction[0]:,.2f}**")
+        st.success(f"Predicted Monthly Income: **₹{prediction[0]:,.2f}**")
         st.info(f"Model used: {model_choice}")
 
 # ==================== BULK PREDICTION (CSV UPLOAD) ====================
@@ -180,4 +180,5 @@ elif mode == "Bulk Prediction (CSV Upload)":
         st.success("Bulk prediction completed! You can now download the CSV with predicted salaries.")
 
 st.sidebar.markdown("---")
+
 st.sidebar.info("Upload CSV or enter details to predict salaries using the selected model.")
